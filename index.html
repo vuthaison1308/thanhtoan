@@ -19,11 +19,11 @@
 
         .container {
             background-color: #333;
-            padding: 10px;
+            padding: 10px; 
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 10px; 
             width: 80%;
         }
 
@@ -33,13 +33,12 @@
         }
 
         .qr-code img {
-            max-width: 25%;
             height: auto;
         }
 
         .account-info {
             margin-top: 10px;
-            font-size: 18px;
+            font-size: 18px; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,9 +61,38 @@
         .copy-button:hover {
             background-color: #777;
         }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .header {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        @media (orientation: portrait) {
+            .qr-code img {
+                max-width: 40%;
+            }
+        }
+
+        @media (orientation: landscape) {
+            .qr-code img {
+                max-width: 15%;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        THÔNG TIN THANH TOÁN
+    </div>
+
     <div class="container">
         <h1>MOMO: Nguyễn Chính Huy</h1>
         <div class="qr-code">
@@ -90,9 +118,14 @@
     <div class="container">
         <h1>Thesieure/ Gachthe1s (tsr+5,5k/ gt1s+2k phí rút)</h1>
         <div class="account-info">
-            <p>Số tài khoản: <strong id="account3">nguchokhyn11234</strong></p>
+            <p>Số tài khoản: <strong id="account3">1122334455</strong></p>
             <button class="copy-button" onclick="copyToClipboard('account3')">Copy</button>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>Discord: Theaug</p>
+        <p>Email: vuthaison672@gmail.com</p>
     </div>
 
     <script>
