@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 10px; /* Giảm padding */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-bottom: 10px; /* Giảm khoảng cách giữa các container */
+            width: 80%;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 24px; /* Giảm kích thước chữ */
+        }
+
+        .qr-code img {
+            max-width: 15%; /* Giảm kích thước mã QR */
+            height: auto;
+        }
+
+        .account-info {
+            margin-top: 10px; /* Giảm khoảng cách trên */
+            font-size: 18px; /* Giảm kích thước chữ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .account-info p {
+            margin: 0;
+            margin-right: 10px;
+        }
+
+        .copy-button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MOMO: Nguyễn Chính Huy</h1>
+        <div class="qr-code">
+            <img src="https://media.discordapp.net/attachments/1270901398682468446/1271485987339505766/image_1.png?ex=66b7831a&is=66b6319a&hm=999772ec6a97a38226fa43ce9cc4a841e0c105d1a975e9a503e19d01576d3912&=&format=webp&quality=lossless&width=468&height=470" alt="QR Code">
+        </div>
+        <div class="account-info">
+            <p>Số tài khoản: <strong id="account1">0868563890</strong></p>
+            <button class="copy-button" onclick="copyToClipboard('account1')">Copy</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>MB Bank: Vu Thai Son</h1>
+        <div class="qr-code">
+            <img src="https://media.discordapp.net/attachments/1270901398682468446/1271485926383812628/image.png?ex=66b7830b&is=66b6318b&hm=9aeff3886f536edb2b2f8ac8baab1a6cc46cfe67467dbcd61b52bb80cf916198&=&format=webp&quality=lossless&width=440&height=437" alt="QR Code">
+        </div>
+        <div class="account-info">
+            <p>Số tài khoản: <strong id="account2">25080813082008</strong></p>
+            <button class="copy-button" onclick="copyToClipboard('account2')">Copy</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Thesieure/ Gachthe1s</h1>
+        <div class="account-info">
+            <p>Số tài khoản: <strong id="account3">nguchokhyn11234</strong></p>
+            <button class="copy-button" onclick="copyToClipboard('account3')">Copy</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(id) {
+            var copyText = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(copyText).then(function() {
+                alert("Đã sao chép: " + copyText);
+            }, function(err) {
+                alert("Không thể sao chép: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
